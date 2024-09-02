@@ -1,18 +1,70 @@
 ''' 3. Input and Output Operations 
-3.1 Construct and analyze code segments that perform file input and  
-output operations 
-• open, close, read, write, append, check existence, delete, with statement 
-
-
-
-3.2 Construct and analyze code segments that perform console input  
+3.2 Construct and analyze code segments that perform console input
 and output operations 
-• Read input from console, print formatted text (string.format() method,  
-f-String method), use command-line arguments 
+• print formatted text (string.format() method, f-String method)
 '''
-###### string format methods #####
+#### Concatenation and Comma Operator
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+d = a + " " + b
+print(d)
+print(a, b)
 
-##  string format method:
+########  f-strings #########  formated string literal method
+#### introduced in Python 3.6 -- newer and most preferred method
+# Put an f in front of the string literal, and add curly brackets {}
+# as placeholders for variables and other operations.
+
+name = "Alice"
+age = 30
+f_string = f"My name is {name} and I am {age} years old."
+print(f_string)   # faster and more flexible than string concatenation
+                  # could be excellent for loops
+
+### place holders can contain Python code like math operations
+x = 5
+y = 10
+result = f"The sum of {x} and {y} is {x + y}."
+print(result)
+
+#  A modifier is included by adding a colon : followed by a legal
+#  formatting type, like .2f which means fixed point number with 2 decimals:
+pi = 3.141592653589793
+formatted_pi = f"Value of Pi: {pi:.2f}"
+print(formatted_pi)
+
+person = {"name": "Bob", "age": 25}
+info = f"Name: {person['name']}, Age next year: {person['age'] + 1}"
+print(info)
+
+multiline_string = f"""
+This is a
+multiline
+f-string.
+"""
+print(multiline_string)
+
+
+###### format() method #######
+# Example with string.format() method
+formatted_string_format = "Hello, {}! You are {} years old.".format(user_name, user_age)
+print(formatted_string_format)
+
+number = 123.456789
+formatted_string_format = "The number is {:.2f}".format(number)
+print(formatted_string_format)
+
+# Example with f-string method (available in Python 3.6 and later)
+formatted_f_string = f"Hello, {user_name}! You are {user_age} years old."
+print(formatted_f_string)
+
+number = 123.456789
+formatted_f_string = f"The number is {number:.2f}"
+print(formatted_f_string)
+
+
 def format_money(amount):
     return '${:,.2f}'.format(amount)
 
@@ -29,32 +81,9 @@ for i in range(1, 10, 2):
 # as long as the order doesn't change!
 print('Pi rounded to {:.2f} decimal places is {:.2f}.'.format(2, pi))
 
-## formated string literal method
-name = "Alice"
-age = 30
-f_string = f"My name is {name} and I am {age} years old."
-print(f_string)   # faster and more flexible than string concatenation
-                  # could be excellent for loops
 
-x = 5
-y = 10
-result = f"The sum of {x} and {y} is {x + y}."
-print(result)
 
-pi = 3.141592653589793
-formatted_pi = f"Value of Pi: {pi:.2f}"
-print(formatted_pi)
-
-person = {"name": "Bob", "age": 25}
-info = f"Name: {person['name']}, Age next year: {person['age'] + 1}"
-print(info)
-
-multiline_string = f"""
-This is a
-multiline
-f-string.
-"""
-print(multiline_string)
+####### % string formatting  ########
 
 '''
 f-strings:

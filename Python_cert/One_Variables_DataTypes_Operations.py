@@ -17,6 +17,77 @@ containment (in)
 containment (in) 
 
 '''
+######   Global and Local Variables #########
+## global variables are available to functions
+x = "awesome"
+
+def myfunc():
+  print("Python is " + x)
+
+myfunc()
+
+##If you create a variable with the same name inside a function,
+# this variable will be local, and can only be used inside the function.
+# It will have higher precedence inside the function.
+# The global variable with the same name will remain as it was,
+# global and with the original value.
+# notice the function has to be called
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x) # Python is fantastic
+
+myfunc()
+
+print("Python is " + x) #Python is awesome
+
+
+#If you use the global keyword, the variable belongs to the global
+# scope:
+# this is considered poor form
+# it's better to create global variables on the global scope
+# and pass them by reference into functions
+# notice the function has to be called
+def myfunc2():
+  global x
+  x = "fantastic"
+
+myfunc2()
+
+print("Python is " + x)
+
+# To change the value of a global variable inside a function,
+# refer to the variable by using the global keyword:
+# notice the function has to be called
+x = "awesome"
+
+def myfunc3():
+  global x
+  x = "fantastic"
+
+myfunc3()
+
+print("Python is " + x)
+### ----------------------------------
+### FLOAT ####
+#Floats are  positive, negative, or zero containing a decimal or
+# scientific numbers with an "e" to indicate the power of 10.
+x = 0.0
+y = 1.1
+z = -35.59
+x = 35e3
+y = 12E4
+z = -87.7e100
+
+### ----------------------------------
+### Complex ####
+# you cannot convert complex into another number type
+x = 3+5j
+y = 5j
+z = -5j
+
+
 ## swapping
 s1 = 'first'
 s2 = 'second'
@@ -36,8 +107,8 @@ print("not True and True:", not True and True) #False
 
 # 'You can have pizza or chicken'
 # English is exclusive or (one or the other but not both)
-# Python interprets or as inclusive
-# inclusive allows both possibilities as well as either 
+# Python interprets or as inclusive.
+# inclusive or allows both and either
 print("True or True:", True or True) # True (both)
 print("True or False:", True or False) # True (either)
 print("False or False:", False or False) # False (neither)
@@ -51,7 +122,7 @@ print((pizza and not chicken) or (chicken and not pizza)) # False
 
 pizza = False
 chicken = True
-print("I want pizza or chicken (exclusie or): ", end='')
+print("I want pizza or chicken (exclusive or): ", end='')
 print((pizza and not chicken) or (chicken and not pizza)) # True
 
 pizza = True

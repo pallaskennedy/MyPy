@@ -14,11 +14,11 @@ assertEqual, assertTrue, assertIs, assertIn)
 #The except block is executed if an exception occurs in the try block.
 
 
-try:
+'''try:
     # Code that might raise an exception
 except <ExceptionType>:
     # Code to handle the exception
-
+'''
 try:
     result = 10 / 0  # This will raise a ZeroDivisionError
 except ZeroDivisionError:
@@ -29,37 +29,37 @@ except ZeroDivisionError:
 # or using a tuple of exception types.
 
 
-try:
+'''try:
     # Code that might raise an exception
 except (TypeError, ValueError):
     # Code to handle TypeError or ValueError
 else Block:
-
+'''
 #The else block is executed if no exception occurs in the try block.
 
 ### Finally
-try:
+'''try:
     result = 10 / 2
 except ZeroDivisionError:
     print("Cannot divide by zero.")
 else:
     print("Division successful:", result)
-finally Block:
+finally Block:'''
 
-# The finally block is always executed, whether an exception occurs or not.
+# The finally block is __always__ executed, whether an exception occurs or not.
 # It is typically used for cleanup operations, such as closing files or releasing resources.
 
 
 
 ### Raise
-try:
+'''try:
     # Code that might raise an exception
 except <ExceptionType>:
     # Code to handle the exception
 finally:
     # Code that always runs, regardless of whether an exception occurred
 raise Statement:
-
+'''
 # The raise statement is used to raise a specific exception manually.
 
 try:
@@ -75,11 +75,11 @@ except ValueError as e:
 # However, this is generally discouraged as it may hide bugs or unexpected issues.
 
 
-try:
+'''try:
     # Code that might raise an exception
 except Exception as e:
     # Code to handle any exception
-
+'''
 
 # Custom Exceptions:
 # You can create your own custom exception classes by inheriting from the
@@ -338,7 +338,7 @@ class TestFindIntersection(unittest.TestCase):
         """ Test 4: User sends equations for Vertical and Horizontal Lines """
         # both lines
         expected = 'The lines intersect at point (3, 5)'
-        result = funtions.find_intersection(x=3, y=5)
+        result = functions.find_intersection(x=3, y=5)
         self.assertEqual(expected, result, "Both lines are horizontal and vertical.  The function should handle this case appropriately")
 
         # y line

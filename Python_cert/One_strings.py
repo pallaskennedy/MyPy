@@ -81,6 +81,9 @@ print(convert_to_celsius(78.8), end=', and ')
 print(convert_to_celsius(10.4), end=' Celsius.\n')
 
 ############ String methods ########
+# use in and not in to check existence
+print('fox?', "fox" in S)
+print('doll?',"doll" not in S)
 print(len(S))   # len()
 print(S.capitalize())  #make the first character have uppercase and the rest lowercase.
 
