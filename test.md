@@ -18,4 +18,11 @@
   <p>This paragraph is indented using the <code>&lt;blockquote&gt;</code> tag.</p>
   <p>It's commonly used for block-level quotations but can serve for general indentation as well.</p>
 </blockquote>
+<!-- Indentation using preformatted text -->
+<pre>
+  This is some indented text
+  without needing to use a list.
+  You can add multiple lines here
+  and the indentation will be preserved.
+</pre>
 
