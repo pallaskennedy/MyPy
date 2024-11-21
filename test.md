@@ -13,3 +13,9 @@
   <p>Indentation is applied using the <code>margin-left</code> style property.</p>
   <p>Additional indented content can go here, such as more paragraphs or text blocks.</p>
 </div>
+<!-- Indentation using blockquote -->
+<blockquote>
+  <p>This paragraph is indented using the <code>&lt;blockquote&gt;</code> tag.</p>
+  <p>It's commonly used for block-level quotations but can serve for general indentation as well.</p>
+</blockquote>
+
