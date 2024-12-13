@@ -159,18 +159,18 @@
 ### Validate employee numbers of the format of  ddd-dd-dddd and having only numbers
 ### printTrue if the number is valid
 ##
-##employee_number = ''  #use of empty string or None is standard, use of 'sentinel' is not and makes the code confusing to understand
-##parts = ''
-##while employee_number == '':
-##    valid = False  #common validation techniqu => assume it is not valid and see if it passes the if blocks
-##    employee_number = input("Enter employee number (ddd-dd-dddd) : ")
-##    parts = employee_number.split('-')
-##    if len(parts) == 3:
-##
-##        if len(parts[0]) == 3 and len(parts[1]) == 2 and len(parts[2]) == 4:
-##            if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit():
-##                valid = True  # since the input passed through all if conditions, we now set valid to true
-##    print(valid)
+employee_number = 'sentinel' #the while choices being !='' or !='sentinel' forces sentinel here 
+parts = ''
+while employee_number != '':
+    valid = False  #common validation techniqu => assume it is not valid and see if it passes the if blocks
+    employee_number = input("Enter employee number (ddd-dd-dddd) : ")  #if the string is empty, the while loop terminates
+    parts = employee_number.split('-')
+    if len(parts) == 3:
+
+        if len(parts[0]) == 3 and len(parts[1]) == 2 and len(parts[2]) == 4:
+            if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit():
+                valid = True  # since the input passed through all if conditions, we now set valid to true
+    print(valid)
 
 
 ######### ======   ======  33 ####### ======   ======
@@ -819,13 +819,13 @@ PCAP
 # >>> 1 2 3 4
 
 
-#################### ======   ======  5  ######### ======   ======
-### What is the value type returned after executing the following snippet?
-##x = 0                   # int
-##y = 2                   # int
-##z = len("Python")      # int == 6
-##x = y > z               # D. bool
-##print(x)
+################## ======   ======  5  ######### ======   ======
+# What is the value type returned after executing the following snippet?
+x = 0                   # int
+y = 2                   # int
+z = len("Python")      # int == 6
+x = y > z               # D. bool
+print(x)
 
 
 #################### ======   ======  6 ######### ======   ======
