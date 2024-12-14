@@ -133,18 +133,23 @@
 ### ignore blank lines
 ### close file when all lines are read
 ##
-##inventory = open('inventory.txt', "r")
-##eof = False
-##while eof == False:
-##    line = inventory.readline()
-##    if line !="":
-##        if line !="\n":  # each empty line of the file is encoded as '\n', if this is the first conditional, the else block will fire
-##            print(line)
-##    else:
-##        print("End of file")
-##        
-##        eof = True
-##        inventory.close()
+inventory = open('inventory.txt', "r")
+eof = False
+while eof == False:
+    line = inventory.readline()
+    if line !='':
+        if line !=  '\n':  # each empty line of the file is encoded as '\n', if this is the first conditional, the else block will fire
+            print(line)
+    else:
+        print("End of file")
+        
+        eof = True
+        inventory.close()
+
+## if line != '\n' : if line !=''  exits at first empty line
+## if line != '\n': if line !=None  exits at first empty line
+## if line !='': if line !=""  prints empty/blank lines
+
 
 ####### ======   ======  31 ####### ======   ======
 ##a = 11
@@ -159,18 +164,18 @@
 ### Validate employee numbers of the format of  ddd-dd-dddd and having only numbers
 ### printTrue if the number is valid
 ##
-employee_number = 'sentinel' #the while choices being !='' or !='sentinel' forces sentinel here 
-parts = ''
-while employee_number != '':
-    valid = False  #common validation techniqu => assume it is not valid and see if it passes the if blocks
-    employee_number = input("Enter employee number (ddd-dd-dddd) : ")  #if the string is empty, the while loop terminates
-    parts = employee_number.split('-')
-    if len(parts) == 3:
-
-        if len(parts[0]) == 3 and len(parts[1]) == 2 and len(parts[2]) == 4:
-            if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit():
-                valid = True  # since the input passed through all if conditions, we now set valid to true
-    print(valid)
+##employee_number = 'sentinel' #the while choices being !='' or !='sentinel' forces sentinel here 
+##parts = ''
+##while employee_number != '':
+##    valid = False  #common validation techniqu => assume it is not valid and see if it passes the if blocks
+##    employee_number = input("Enter employee number (ddd-dd-dddd) : ")  #if the string is empty, the while loop terminates
+##    parts = employee_number.split('-')
+##    if len(parts) == 3:
+##
+##        if len(parts[0]) == 3 and len(parts[1]) == 2 and len(parts[2]) == 4:
+##            if parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit():
+##                valid = True  # since the input passed through all if conditions, we now set valid to true
+##    print(valid)
 
 
 ######### ======   ======  33 ####### ======   ======
@@ -844,15 +849,29 @@ print(x)
 #################### ======   ======  7  ######### ======   ======
 ### Which line can be used instead of the comment to cause the snippet to
 ### produce the following expected output? (Select all that apply)
-### Code:
-##z, y, x = 2, 1, 0    # x = 0, y = 1 , z = 2
-##x, z = z, y          # x = 2, y =1, z = 1
-##y = y - z           # x = 2, y = 0, z = 1
-### put line here
-##print(x, y, z)
-##
 ###Expected output:
 ### 0, 1, 2
+### Code:
+z, y, x = 2, 1, 0    # x = 0, y = 1 , z = 2
+x, z = z, y          # x = 2, y =1, z = 1
+y = y - z           # x = 2, y = 0, z = 1
+x, y, z = y, z, x
+print(x, y, z)
+
+
+z, y, x = 2, 1, 0    # x = 0, y = 1 , z = 2
+x, z = z, y          # x = 2, y =1, z = 1
+y = y - z           # x = 2, y = 0, z = 1
+z, y, x = x, z, y
+print(x, y, z)
+
+z, y, x = 2, 1, 0    # x = 0, y = 1 , z = 2
+x, z = z, y          # x = 2, y =1, z = 1
+y = y - z           # x = 2, y = 0, z = 1
+y, z, x = x, z, y
+print(x, y, z)
+##
+
 ####A. x, y, z = y, z, x
 ####B. z, y, x = x, z, y
 
