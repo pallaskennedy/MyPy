@@ -77,3 +77,29 @@ while playing:
     
     if play_again != "y":
         playing = False
+
+
+
+'''
+Goup related tasks into functions:
+	•	Game Setup:
+	•	Initialize variables like the word list, secret word, and guesses.
+	•	Input Handling:
+	•	Get a valid letter from the player.
+	•	Game Logic:
+	•	Check if the letter is correct.
+	•	Update the display for the hidden word.
+	•	Check if the game is won or lost.
+	•	Display:
+	•	Show the hidden word and guesses.
+	•	Game Flow:
+	•	Handle starting a new game or ending the program.
+
+
+Further enhance this game by:
+	•	Adding a scoring system.
+	•	Supporting difficulty levels (e.g., fewer or more chances).
+	•	Handling input for full-word guesses.
+	•	Using classes (object-oriented programming) for even better organization.
+'''
+
